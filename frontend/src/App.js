@@ -1,3 +1,4 @@
+import React from 'react';
 import LandingPage from './components/LandingPage';
 import BeneficiarySignUp from './components/BeneficiarySignUp';
 import BeneficiaryRequest from './components/BeneficiaryRequest';
