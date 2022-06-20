@@ -18,7 +18,7 @@ function FoodBankRequests() {
             {items.map(item => (
                 <div>
                     <p>{item.requestedFoodBank}</p>
-                    <p>{item.requestedOrganization}</p>
+                    <p>{item.requestingOrganization}</p>
                     <p>{item.email}</p>
                     <p>{item.needQuantity}</p>
                     <p>{item.helpType}</p>
