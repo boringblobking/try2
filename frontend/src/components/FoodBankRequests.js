@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import './FoodBankRequests.css'
 
 function FoodBankRequests() {
     useEffect( ()=> {
@@ -14,20 +15,31 @@ function FoodBankRequests() {
     };
 
     return(
-        <section>
+        <div>
+            <h2>Your requests</h2>
+            <p>when you receive requests for help, they will appear here</p>
+            <div>
             {items.map(item => (
-                <div>
-                    <p>{item.requestedFoodBank}</p>
-                    <p>{item.requestingOrganization}</p>
-                    <p>{item.email}</p>
-                    <p>{item.needQuantity}</p>
-                    <p>{item.helpType}</p>
-                    <p>{item.requestingOrganizationType}</p>
-                    <p>{item.label}</p>
+                <div className='card' key='item.email'>
+
+
+                        <div className='purpleLine'></div>
+
+
+                    <div className="textDiv">
+                        <p>{item.requestedFoodBank}</p>
+                        <p>{item.requestingOrganization}</p>
+                        <p>{item.email}</p>
+                        <p>{item.needQuantity}</p>
+                        <p>{item.helpType}</p>
+                        <p>{item.requestingOrganizationType}</p>
+                        <p>{item.label}</p>
+                    </div>
                 </div>
             ))
             }
-        </section>
+            </div>
+        </div>
     );
 }
 
