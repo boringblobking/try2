@@ -1,4 +1,5 @@
 .card {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -11,33 +12,27 @@
         border-style: solid;
         border-color: #6C83FA;
         border-width: thin;
+        display: inline-block;
 }
 
 .purpleLine {
-    width: 4px;
-    height: 100px;
-
-    /* UI Blue */
-
     position: absolute;
-    border: 5px solid #6C83FA;
-
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-    z-index: 1;
-    width: 80%; 
-    float: right; 
-    border: solid
+    display: inline-block;
+    background-color: #6C83FA;
+    width: 0px;
+    height: 85%;
+    right: 5%;
+    left: 2%;
+    top: 7.5%;
+    border-radius: 5px;
+    border: solid #6C83FA;
 }
 
 .textDiv {
-    position: absolute; 
-    width: 20%; 
-    float: left; 
-    border: solid
+    position: absolute;
+    margin-left: 7%;
+    top: 7.5%;
+    display: inline-block;
+    background-color: lightcoral;
+    width: 50%;
 }
