@@ -1,19 +1,117 @@
-.card {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 1px;
-        margin-left: 1em;
-        margin-top: 1em;
-        height: 25vh;
-        width: 72vw;
-        border-radius: 10px;
-        border-style: solid;
-        border-color: #6C83FA;
-        border-width: thin;
-        display: inline-block;
+.pageContent {
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
+
+.yourRequests {
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.yourRequestsSubText {
+    position: relative;
+    width: 439px;
+    height: 19px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #909097;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1px;
+    margin-top: 1em;
+    height: 25vh;
+    width: 72vw;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #6C83FA;
+    border-width: thin;
+    display: inline-block;
+    }        
+    
+.textDiv {
+    position: absolute;
+    margin-left: 7%;
+    top: 7.5%;
+    display: inline-block;
+    width: 50%;
+}
+    
+.cardTitle {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+}    
+
+.cardTitleSubText {
+    position: relative;
+    width: 177px;
+    height: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #909097;
+    left: 8px;
+}
+
+.quantityContainer {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    top: 10px;
+}    
+
+.quantityLabel {
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    float: left;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}    
+
+.quantityBox {
+    position: relative;
+    float: left;
+    padding: 8px 16px;
+    gap: 8px;
+    background: #5193EB;
+    border-radius: 20px;
+    text-align: center;
+    width: 24px;
+    height: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    left: 12px;
+}    
+
+.quantityText {
+    position: relative;
+    bottom: 80%;
+}    
 
 .purpleLine {
     position: absolute;
@@ -26,13 +124,5 @@
     top: 7.5%;
     border-radius: 5px;
     border: solid #6C83FA;
-}
+}    
 
-.textDiv {
-    position: absolute;
-    margin-left: 7%;
-    top: 7.5%;
-    display: inline-block;
-    background-color: lightcoral;
-    width: 50%;
-}
