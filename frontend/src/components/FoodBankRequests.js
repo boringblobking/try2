@@ -44,16 +44,31 @@ function FoodBankRequests() {
                         <div className='card' key={item.email}>
                             <div className='purpleLine'></div>
                             <div className="textDiv">
-                            <div>
-                                <span className='cardTitle'>{item.requestedFoodBank}</span> 
-                                <span className="cardTitleSubText">has sent a request for help</span>
-                            </div>
-                            <div className="quantityContainer"> 
-                                <div className='quantityLabel'>Number of people in need:</div> 
-                                <div className="quantityBox">
-                                    <p className="quantityText">{item.needQuantity}</p>
-                                </div> 
-                            </div>
+                                <div>
+                                    <span className='cardTitle'>{item.requestedFoodBank}</span> 
+                                    <span className="cardTitleSubText">has sent a request for help</span>
+                                </div>
+                                <div className="quantityContainer"> 
+                                    <div className='quantityLabel'>Number of people in need:</div> 
+                                    <div className="quantityTag">
+                                        <p className="quantityText">{item.needQuantity}</p>
+                                    </div> 
+                                </div>
+                                <div className="helpTypeContainer"> 
+                                    <div className='helpTypeLabel'>Type of help needed:</div> 
+                                    <div className="helpTypeTag">
+                                        <p className="helpTypeText">{item.helpType}</p>
+                                    </div> 
+                                </div>
+                                <div className="statusContainer"> 
+                                    <div className='statusLabel'>Status:</div> 
+                                    <div className="statusTag">
+                                        <p className="statusText">To do</p>
+                                    </div> 
+                                </div>
+                                <div className='received'>
+                                    <p>Received 19/06/2022</p>
+                                </div>
                                 {/* <p>{item.requestingOrganization}</p>
                                 <p>{item.email}</p>
                                 <p>{item.helpType}</p>
