@@ -1,4 +1,5 @@
 import React from 'react';
+import './BeneficiaryRequest.css'
 
 function BeneficiaryRequest() {
     return(<div>

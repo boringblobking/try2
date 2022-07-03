@@ -1,4 +1,5 @@
 import React from 'react';
+import './LandingPage.css'
 import smallLogo from '../images/logo.png'
 import bigLogo from '../images/big-logo.png'
 

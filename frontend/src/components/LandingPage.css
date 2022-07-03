@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&family=Space+Grotesk:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk','Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 3em;
+  height: 3em;
+}
+
+.full-logo {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 1em;
+}
+
+.logo-txt {
+  margin-top: 0.3em;
+  font-size: 1.7em;
+}
+
+.red {
+  color: #F87575;
+}
+
+.purple {
+  color: #4F45C2;
+}
+
+.white {
+  color: white;
+}
+
+
+.jumbotron {
+  background-color: #6C83FA;
+  height: 45vh;
+  width: 100vw;
+  display:flex;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.jumbo-logo-txt {
+  margin-top: 0.3em;
+  margin-left: 0.2em;
+  font-size: 1.9em;
+}
+
+.jumbo-full-logo {
+  display: flex;
+  margin-top: 4em;
+  margin-left: 3em;
+}
+
+.jumbo-logo {
+  width: 3em;
+  height: 3em;
+  margin-top: 0.3em;
+}
+
+.jumbo-txt {
+  font-size: 1.9em;
+  margin-left: 1.8em;
+}
+
+.jumbo-mini-txt {
+  margin-left: 3.5em;
+}
+
+.nav-links {
+  list-style: none;
+  margin-right: 2vw;
+  margin-top: 1.7em;
+}
+.nav-links li {
+  display: inline;
+  margin-right: 1.2em;
+}
+.circle-container {
+  display: flex;
+  justify-content: right;
+}
+.circle-one {
+  width: 70vh;
+  height: 70vh;
+  margin-right: -50vw;
+  margin-top: -10vh;
+  border-radius: 100vmax;
+  background-color: #EDEDFF;
+}
+
+.circle-two {
+  width: 50vh;
+  height: 50vh;
+  border-radius: 100vmax;
+  margin-right: 15vw;
+  margin-top: 12.5vw;
+  background-color: #4F45C2;
+}
+
