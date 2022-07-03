@@ -5,6 +5,7 @@
 .navbar {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid #E3E3E3;
 }
 
 .logo {
@@ -43,7 +44,7 @@
 }
 
 .topGap {
-    height: 10%;
+    height: 20%;
 }
 
 .welcomeBox {
@@ -150,7 +151,7 @@
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    top: 10px;
+    top: 15px;
 }    
 
 .quantityLabel {
@@ -165,7 +166,7 @@
     padding-bottom: 8px;
 }    
 
-.quantityBox {
+.quantityTag {
     position: relative;
     float: left;
     padding: 8px 16px;
@@ -182,9 +183,94 @@
     line-height: 17px;
     color: #FFFFFF;
     left: 12px;
+    bottom: 2px;
 }    
 
 .quantityText {
+    position: relative;
+    bottom: 80%;
+}    
+
+.helpTypeContainer {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    top: 30px;
+}    
+
+.helpTypeLabel {
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    float: left;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}    
+
+.helpTypeTag {
+    position: relative;
+    float: left;
+    padding: 8px 16px;
+    gap: 8px;
+    border-radius: 20px;
+    border: 1px solid #CDF0FC;
+    text-align: center;
+    height: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5193EB;
+    left: 12px;
+    bottom: 2px;
+}   
+
+.helpTypeText {
+    position: relative;
+    bottom: 80%;
+}    
+
+.statusContainer {
+    position: relative;
+    top: 40px;
+}    
+
+.statusLabel {
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    float: left;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}    
+
+.statusTag {
+    position: relative;
+    float: left;
+    padding: 8px 16px;
+    gap: 8px;
+    border-radius: 20px;
+    border: 1px solid #5193EB;;
+    text-align: center;
+    height: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5193EB;
+    left: 12px;
+    bottom: 2px;
+}   
+
+.statusText {
     position: relative;
     bottom: 80%;
 }    
@@ -202,3 +288,7 @@
     border: solid #6C83FA;
 }    
 
+.received {
+    position: absolute;
+    top: 160px;
+}
