@@ -45,7 +45,7 @@ function FoodBankRequests() {
                             <div className='purpleLine'></div>
                             <div className="textDiv">
                                 <div>
-                                    <span className='cardTitle'>{item.requestedFoodBank}</span> 
+                                    <span className='cardTitle'>{item.requestingOrganization}</span> 
                                     <span className="cardTitleSubText">has sent a request for help</span>
                                 </div>
                                 <div className="quantityContainer"> 
@@ -67,13 +67,9 @@ function FoodBankRequests() {
                                     </div> 
                                 </div>
                                 <div className='received'>
-                                    <p>Received 19/06/2022</p>
+                                    <p>Received {new Date(item.createdAt).getDate()}/{new Date(item.createdAt).getMonth() + 1}/{new Date(item.createdAt).getFullYear()}</p>
                                 </div>
-                                {/* <p>{item.requestingOrganization}</p>
-                                <p>{item.email}</p>
-                                <p>{item.helpType}</p>
-                                <p>{item.requestingOrganizationType}</p>
-                                <p>{item.label}</p> */}
+                                <button className='completedBtn'>Mark as completed</button>
                             </div>
                         </div>
                         <br></br>

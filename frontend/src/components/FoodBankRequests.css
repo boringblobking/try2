@@ -298,3 +298,23 @@
     line-height: 17px;
     color: #909097;
 }
+
+.completedBtn {
+    position: absolute;
+    left: 128.5%; 
+    top: 165px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+    position: absolute;
+    width: 174px;
+    height: 33px;
+    border: transparent;
+    background: #5193EB;
+    border-radius: 2px;
+    border-color: #5193EB;
+    color: #ffffff;
+}
