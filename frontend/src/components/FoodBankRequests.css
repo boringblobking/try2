@@ -290,5 +290,11 @@
 
 .received {
     position: absolute;
-    top: 160px;
+    top: 165px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #909097;
 }

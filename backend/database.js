@@ -8,6 +8,10 @@ const requestSchema = new mongoose.Schema({
     needQuantity: Number,
     helpType: String,
     requestingOrganizationType: String,
+    createdAt: {
+        type: Date,
+        default: () => Date.now()
+    },
     label: String
 })
 

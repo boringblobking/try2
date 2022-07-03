@@ -36,7 +36,7 @@ function FoodBankRequests() {
             </div>
             <div>
                 <h2 className="yourRequests">Your requests</h2>
-                <p className="yourRequestsSubText">when you receive requests for help, they will appear here</p>
+                <p className="yourRequestsSubText">When you receive requests for help, they will appear here</p>
             </div>
             <div>
                 {items.map(item => (
