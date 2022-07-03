@@ -4,6 +4,7 @@ import BeneficiarySignUp from './components/BeneficiarySignUp';
 import BeneficiaryRequest from './components/BeneficiaryRequest';
 import FoodBankSignUp from './components/FoodBankSignUp';
 import FoodBankRequests from './components/FoodBankRequests';
+import Login from './components/Login';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/beneficiary-request" exact element={<BeneficiaryRequest/>} />
         <Route path="/food-bank-sign-up" exact element={<FoodBankSignUp/>} />
         <Route path="/food-bank-requests" exact element={<FoodBankRequests/>} />
+        <Route path="/login" exact element={<Login/>} />
         </Routes>
       </header>
     </div>
