@@ -2,6 +2,81 @@
     position: relative;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 3em;
+    height: 3em;
+}
+
+.full-logo {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 1em;
+}
+
+.logo-txt {
+    margin-top: 0.3em;
+    font-size: 1.7em;
+}
+
+.red {
+    color: #F87575;
+}
+
+.purple {
+    color: #4F45C2;
+}
+
+.nav-links {
+    list-style: none;
+    margin-right: 2vw;
+    margin-top: 1.7em;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 1.2em;
+}
+
+.topGap {
+    height: 10%;
+}
+
+.welcomeBox {
+    position: relative;
+    left: 27%;
+    border-radius: 10px;
+    background: #6C83FA;
+    width: 46%;
+    height: 122px;
+    border: solid;
+    border-width: thin;
+    border-color: #6C83FA;
+}
+
+.welcomeMessage {
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    padding-left: 32px;
+}
+
+.welcomeSubText {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    padding-left: 32px;
+    color: #FFFFFF;
+}
+
 .yourRequests {
     position: relative;
     font-family: 'Inter';
@@ -9,6 +84,7 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
+    left: 27%;
 }
 
 .yourRequestsSubText {
@@ -21,6 +97,7 @@
     font-size: 16px;
     line-height: 19px;
     color: #909097;
+    left: 27%;
 }
 
 .card {
@@ -28,15 +105,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 1px;
     margin-top: 1em;
     height: 25vh;
-    width: 72vw;
     border-radius: 10px;
     border-style: solid;
     border-color: #6C83FA;
     border-width: thin;
     display: inline-block;
+    width: 46%;
+    height: 231px;
+    left: 27%;
     }        
     
 .textDiv {
