@@ -3,11 +3,15 @@
 
 body {
   margin: 0;
-  font-family: 'Space Grotesk','Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.landing-bdy {
+  width: auto;
 }
 
 code {
@@ -18,6 +22,11 @@ code {
 .navbar {
   display: flex;
   justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: end;
 }
 
 .logo {
@@ -53,10 +62,11 @@ code {
   background-color: #6C83FA;
   height: 45vh;
   width: 100vw;
-  display:flex;
+  display: flex;
   overflow: hidden;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 90px;
 }
 
 .jumbo-logo-txt {
@@ -91,14 +101,17 @@ code {
   margin-right: 2vw;
   margin-top: 1.7em;
 }
+
 .nav-links li {
   display: inline;
   margin-right: 1.2em;
 }
+
 .circle-container {
   display: flex;
   justify-content: right;
 }
+
 .circle-one {
   width: 70vh;
   height: 70vh;
@@ -117,3 +130,53 @@ code {
   background-color: #4F45C2;
 }
 
+.Signup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Singup-Options {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.Foodbank-Signup {
+  border: 1px solid #CFE1F9;
+  border-radius: 4px;
+
+
+}
+
+.Beneficiary-Signup {
+  border: 1px solid #CFE1F9;
+  border-radius: 4px;
+
+
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  border: 2px solid darkblue;
+  border-radius: 4px;
+  transition: .1s all;
+
+
+}
+
+
+.Already-Have-an-Account {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
