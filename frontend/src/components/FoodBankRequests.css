@@ -44,7 +44,7 @@
 }
 
 .topGap {
-    height: 20%;
+    height: 40px;
 }
 
 .welcomeBox {
@@ -100,6 +100,16 @@
     color: #909097;
     left: 27%;
 }
+
+/* .cardsContainer {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 50vw;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+} */
 
 .card {
     position: relative;

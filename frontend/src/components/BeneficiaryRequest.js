@@ -1,8 +1,26 @@
 import React from 'react';
 import './BeneficiaryRequest.css'
+import smallLogo from '../images/logo.png'
 
 function BeneficiaryRequest() {
-    return(<div>
+    return(
+    <div>
+        <nav className='navbar'>
+                <div className='full-logo'>
+                    <img src={smallLogo} className='logo'/> 
+                    <h3 className='logo-txt'><span className='red'>Food</span><span className='purple'>&Flow</span></h3>
+                </div>
+                <ul className='nav-links'>
+                    <li><strong>Home</strong></li>
+                    <li>About Us</li>
+                    <li>Contact</li>
+                </ul>
+        </nav>
+        <div className="topGap"></div>
+        <div className="welcomeBox">
+                <h2 className="welcomeMessage">Welcome, Liverpool Street Food Bank</h2>
+                <p className="welcomeSubText">Use this area to track and receive requests for help.</p>
+        </div>
         <h1>BeneficiaryRequest</h1>
         <form method="POST" action="/request-form">
             <label for="requestedFoodBank">Select a food bank in your area</label>
@@ -21,7 +39,8 @@ function BeneficiaryRequest() {
             <input type="text" id="label" name="label" placeholder="Placeholder"></input>
             <button type="submit">Send Request</button>
         </form>
-    </div>);
+    </div>
+    );
 }
 
 export default BeneficiaryRequest;

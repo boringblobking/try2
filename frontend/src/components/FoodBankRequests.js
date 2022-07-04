@@ -29,7 +29,7 @@ function FoodBankRequests() {
                     <li>Contact</li>
                 </ul>
             </nav>
-            <br className="topGap"></br>
+            <div className="topGap"></div>
             <div className="welcomeBox">
                 <h2 className="welcomeMessage">Welcome, Liverpool Street Food Bank</h2>
                 <p className="welcomeSubText">Use this area to track and receive requests for help.</p>
@@ -38,7 +38,7 @@ function FoodBankRequests() {
                 <h2 className="yourRequests">Your requests</h2>
                 <p className="yourRequestsSubText">When you receive requests for help, they will appear here</p>
             </div>
-            <div>
+            <div className="cardsContainer">
                 {items.map(item => (
                     <div>
                         <div className='card' key={item.email}>
