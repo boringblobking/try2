@@ -1,0 +1,81 @@
+.Content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.LHS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 110px;
+    min-width: 50%;
+}
+
+.Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-bottom: 64px;
+}
+
+.Header p {
+    margin: 20px 0 0 0;
+}
+
+input {
+    min-width: 423px;
+    min-height: 52px;
+    border: 1px solid #DBE2EA;
+    border-radius: 4px;
+    transition: .3s all;
+}
+
+input:hover {
+    border: 2px solid darkblue;
+}
+
+input::placeholder {
+    padding: 16px;
+    margin: 0;
+}
+
+.imageHolder {
+    width: 50%;
+    margin-top: 110px;
+}
+
+.imageHolder img {
+    width: 100%;
+}
+
+.imageHolder img {
+    width: 100%;
+}
+
+input[type=submit] {
+    width: 5px;
+    height: 49px;
+    background-color: #5193EB;
+    color: white;
+    padding: 14px 20px;
+    margin: 14px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+
+    border: 2px solid darkblue;
+
+}
+
+.TextBox {
+    padding: 20px;
+    margin-left: 20px;
+    left: 20px;
+}
