@@ -62,15 +62,7 @@ function BeneficiarySignUp() {
 
             </div>
 
-
-
         </div>
-
-
-
-
-
-
 
 
     );
