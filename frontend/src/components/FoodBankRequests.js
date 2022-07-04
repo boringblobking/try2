@@ -29,7 +29,7 @@ function FoodBankRequests() {
                     <li>Contact</li>
                 </ul>
             </nav>
-            <br className="topGap"></br>
+            <div className="topGap"></div>
             <div className="welcomeBox">
                 <h2 className="welcomeMessage">Welcome, Liverpool Street Food Bank</h2>
                 <p className="welcomeSubText">Use this area to track and receive requests for help.</p>
@@ -38,14 +38,14 @@ function FoodBankRequests() {
                 <h2 className="yourRequests">Your requests</h2>
                 <p className="yourRequestsSubText">When you receive requests for help, they will appear here</p>
             </div>
-            <div>
+            <div className="cardsContainer">
                 {items.map(item => (
                     <div>
                         <div className='card' key={item.email}>
                             <div className='purpleLine'></div>
                             <div className="textDiv">
                                 <div>
-                                    <span className='cardTitle'>{item.requestedFoodBank}</span> 
+                                    <span className='cardTitle'>{item.requestingOrganization}</span> 
                                     <span className="cardTitleSubText">has sent a request for help</span>
                                 </div>
                                 <div className="quantityContainer"> 
@@ -67,13 +67,9 @@ function FoodBankRequests() {
                                     </div> 
                                 </div>
                                 <div className='received'>
-                                    <p>Received 19/06/2022</p>
+                                    <p>Received {new Date(item.createdAt).getDate()}/{new Date(item.createdAt).getMonth() + 1}/{new Date(item.createdAt).getFullYear()}</p>
                                 </div>
-                                {/* <p>{item.requestingOrganization}</p>
-                                <p>{item.email}</p>
-                                <p>{item.helpType}</p>
-                                <p>{item.requestingOrganizationType}</p>
-                                <p>{item.label}</p> */}
+                                <button className='completedBtn'>Mark as completed</button>
                             </div>
                         </div>
                         <br></br>
