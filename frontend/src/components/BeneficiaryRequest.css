@@ -34,8 +34,8 @@
     margin-top: 1.7em;
 }
 
-.topGap {
-    height: 40px;
+.gap {
+    height: 20px;
 }
 
 .welcomeBox {
@@ -67,4 +67,111 @@
     line-height: 19px;
     padding-left: 32px;
     color: #FFFFFF;
+}
+
+.requestHelp {
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    left: 27%;
+}
+
+.requestHelpSubText {
+    position: relative;
+    height: 19px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #909097;
+    left: 27%;
+}
+
+.separationLine {
+    position: absolute;
+    width: 99%;
+    height: 0px;
+    border: solid #DBDAFD;
+    background-color: #6C83FA;
+    border-radius: 5px;
+}
+
+.form {
+    position: absolute;
+    /* border: solid; */
+    /* overflow-x: hidden; */
+    width: 46%;
+    left: 27%;
+}
+
+.leftTrippleInputBoxContainer {
+    position: relative;
+    float: left;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    margin-right: 5%;
+}
+
+.rightTrippleInputBoxContainer {
+    position: relative;
+    float: left;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+}
+
+.inputBoxContainer {
+    position: relative;
+    float: left;
+    height: 65px;
+}
+
+.inputBox {
+    position: relative;
+    width: 314px;
+    height: 33px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #DBE2EA;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+::placeholder {
+    color: #909097;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.label {
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 19px;
+    color: #756F86;
+}
+
+.sendRequest {
+    position: relative;
+    padding-top: 8px;
+    padding-bottom: 24px;
+    padding-right: 2px;
+    padding-left: 2px;
+    gap: 8px;
+    font-size: 12px;
+    width: 115px;
+    height: 9px;
+    background: #5193EB;
+    border-radius: 2px;
+    border-color: #5193EB;
+    border: transparent;
+    color: white;
+    top: 9px;
+    left: 82.5%;
 }

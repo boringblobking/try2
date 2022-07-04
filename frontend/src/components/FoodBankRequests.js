@@ -29,11 +29,12 @@ function FoodBankRequests() {
                     <li>Contact</li>
                 </ul>
             </nav>
-            <div className="topGap"></div>
+            <div className="gap"></div>
             <div className="welcomeBox">
                 <h2 className="welcomeMessage">Welcome, Liverpool Street Food Bank</h2>
                 <p className="welcomeSubText">Use this area to track and receive requests for help.</p>
             </div>
+            <div className="gap"></div>
             <div>
                 <h2 className="yourRequests">Your requests</h2>
                 <p className="yourRequestsSubText">When you receive requests for help, they will appear here</p>
