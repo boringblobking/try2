@@ -7,7 +7,6 @@ import bigLogo from '../images/big-logo.png'
 import HeroShot from '../images/HeroShot.png'
 
 function BeneficiarySignUp() {
-
     return (
         <div>
             <div className='landing-bdy'>
@@ -24,14 +23,15 @@ function BeneficiarySignUp() {
                     </ul>
                 </nav>
                 <div className="everything">
-
-                    <form class="formclass">
+                    <form method="POST" action="/new-beneficiary-account" class="formclass">
                         <fieldset>
                             <label> Enter Your Name <input type="text" name="name" placeholder="Name" required></input></label>
                             <label> Enter Your Email: <input type="email" name="email" placeholder="Email" required></input></label>
-                            <label> Enter Location <input type="text" name="name" placeholder="Location" required></input></label>
-                            <label> Enter contact number <input type="text" name="number" pattern="[0-9]{11,}" placeholder="phone" required></input></label>
-                            <label>Create a New Password: <input type="password" name="password" pattern="[a-z0-9]{8,}" placeholder="password" required></input></label>
+                            <label> password <input type="password" name="password1" placeholder="password" required></input></label>
+                            <label> re-enter password <input type="password" name="password2" placeholder="re-enter password" required></input></label>
+                            <label> address <input type="text" name="address" placeholder="address" required></input></label>
+                            <label>phone number <input type="text" name="phoneNumber" placeholder="phone number" required></input></label>
+                            <label>Type of organization <input type="text" name="organizationType" placeholder="type of organization" required></input></label>
                         </fieldset>
                         <fieldset>
                             <label>What Best Describes your Organisation?
@@ -44,7 +44,7 @@ function BeneficiarySignUp() {
                                 </select>
                             </label>
                         </fieldset>
-                        <input type="submit" value="Create Account"></input>
+                        <button type="submit" value="Create Account">Create Account</button>
                     </form>
                     <br></br>
                     <div class="imageHolder">

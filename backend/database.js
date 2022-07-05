@@ -25,9 +25,19 @@ const foodBankAccSchema = new mongoose.Schema({
     password: String,
     address: String,
     phoneNumber: String,
-    typeOfHelp: String
+    helpType: String
+})
+
+const beneficiaryAccSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    password: String,
+    address: String,
+    phoneNumber: String,
+    organizationType: String
 })
 
 module.exports = {
     foodBankAcc: mongoose.model('foodBankAcc', foodBankAccSchema),
+    beneficiaryAcc: mongoose.model('beneficiaryAcc', beneficiaryAccSchema),
     request: mongoose.model('request', requestSchema)}

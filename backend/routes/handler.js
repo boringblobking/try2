@@ -3,6 +3,7 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const {request} = require("../database.js")
 const {foodBankAcc} = require("../database.js")
+const {beneficiaryAcc} = require("../database.js")
 const bcrypt = require('bcrypt');
 
 router.post('/new-food-bank-account', async (req, res) => {
@@ -28,6 +29,32 @@ router.post('/new-food-bank-account', async (req, res) => {
             console.log('error saving new food bank acc to db')
         }
     res.redirect('/food-bank-requests')
+    }
+});
+
+router.post('/new-beneficiary-account', async (req, res) => {
+    console.log("yep")
+    if (req.body.password1 != req.body.password2) {
+        // need to implement a message that is returned to notify the user
+        // that the account wasn't created as the passwords didn't match
+        res.redirect('/beneficiary-sign-up')
+    } else {
+        const hashedPassword = await bcrypt.hash(req.body.password1, 10)
+        const newBeneficiary = new beneficiaryAcc({
+            name: req.body.name,
+            email: req.body.email,
+            password: hashedPassword,
+            address: req.body.address,
+            phoneNumber: req.body.phoneNumber,
+            organizationType: req.body.organizationType
+        });
+        try {
+            console.log("saving new beneficary account to db")
+            await newBeneficiary.save()
+        } catch (err) {
+            console.log('error saving new beneficiary acc to db')
+        }
+    res.redirect('/beneficiary-request')
     }
 });
 
