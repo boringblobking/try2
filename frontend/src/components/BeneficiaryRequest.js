@@ -5,84 +5,84 @@ import smallLogo from '../images/logo.png'
 function BeneficiaryRequest() {
     return(
     <div>
-        <nav class='navbar'>
-                <div class='full-logo'> 
-                    <img src={smallLogo} class='logo'/> 
-                    <h3 class='logo-txt'><span class='red'>Food</span><span class='purple'>&Flow</span></h3>
+        <nav className='navbar'>
+                <div className='full-logo'> 
+                    <img src={smallLogo} className='logo'/> 
+                    <h3 className='logo-txt'><span className='red'>Food</span><span className='purple'>&Flow</span></h3>
                 </div>
-                <ul class='nav-links'>
+                <ul className='nav-links'>
                     <li><strong>Home</strong></li>
                     <li>About Us</li>
                     <li>Contact</li>
                 </ul>
         </nav>
-        <div class="gap"></div>
-        <div class="welcomeBox">
-                <h2 class="welcomeMessage">Welcome, Brampton Manor Academy</h2>
-                <p class="welcomeSubText">Tell us a bit more so that we can connect you with someone that can help.</p>
+        <div className="gap"></div>
+        <div className="welcomeBox">
+                <h2 className="welcomeMessage">Welcome, Brampton Manor Academy</h2>
+                <p className="welcomeSubText">Tell us a bit more so that we can connect you with someone that can help.</p>
         </div>
-        <div class="gap"></div>
+        <div className="gap"></div>
         <div>
-            <h2 class="requestHelp">Request help</h2>
-            <p class="requestHelpSubText">Fill out this form so that we can connect you with someone that can help.</p>
+            <h2 className="requestHelp">Request help</h2>
+            <p className="requestHelpSubText">Fill out this form so that we can connect you with someone that can help.</p>
         </div>
-        <div class="gap"></div>
-        <form class="form" method="POST" action="/request-form">
+        <div className="gap"></div>
+        <form className="form" method="POST" action="/request-form">
             <div>
-                <label class="label" for="requestedFoodBank">Select a food bank in your area</label>
+                <label className="label" for="requestedFoodBank">Select a food bank in your area</label>
                 <br></br>
-                <input class="inputBox" type="text" id="requestedFoodBank" name="requestedFoodBank" placeholder="Liverpool Street Food Bank"></input>
+                <input className="inputBox" type="text" id="requestedFoodBank" name="requestedFoodBank" placeholder="Liverpool Street Food Bank"></input>
             </div>
 
             <br></br>
 
-            <div class="separationLine"></div>
+            <div className="separationLine"></div>
             
             <br></br>
 
-            <div class="leftTrippleInputBoxContainer">
-                <div class="inputBoxContainer">
-                    <label class="label" for="requestingOrganization">Name of your group or community</label>
+            <div className="leftTrippleInputBoxContainer">
+                <div className="inputBoxContainer">
+                    <label className="label" for="requestingOrganization">Name of your group or community</label>
                     <br></br>
-                    <input class="inputBox" type="text" id="requestingOrganization" name="requestingOrganization" placeholder="Brampton Manor Academy"></input>
+                    <input className="inputBox" type="text" id="requestingOrganization" name="requestingOrganization" placeholder="Brampton Manor Academy"></input>
                 </div>
                 <br></br>
-                <div class="inputBoxContainer">
-                    <label class="label" for="needQuantity">How many people are in need?</label>
+                <div className="inputBoxContainer">
+                    <label className="label" for="needQuantity">How many people are in need?</label>
                     <br></br>
-                    <input class="inputBox" type="text" id="needQuantity" name="needQuantity" placeholder="e.g. 50 people"></input>
+                    <input className="inputBox" type="text" id="needQuantity" name="needQuantity" placeholder="e.g. 50 people"></input>
                 </div>
                 <br></br>
-                <div class="inputBoxContainer">
-                    <label class="label" for="requestingOrganizationType">What best describes who you are?</label>
+                <div className="inputBoxContainer">
+                    <label className="label" for="requestingOrganizationType">What best describes who you are?</label>
                     <br></br>
-                    <input class="inputBox" type="text" id="requestingOrganizationType" name="requestingOrganizationType" placeholder="a Scool"></input>
+                    <input className="inputBox" type="text" id="requestingOrganizationType" name="requestingOrganizationType" placeholder="a Scool"></input>
                 </div>
             </div>
 
-            <div class="rightTrippleInputBoxContainer">
-                <div class="inputBoxContainer">
-                    <label class="label" for="email">Email</label>
+            <div className="rightTrippleInputBoxContainer">
+                <div className="inputBoxContainer">
+                    <label className="label" for="email">Email</label>
                     <br></br>
-                    <input class="inputBox" type="text" id="email" name="email" placeholder="Placeholder"></input>
+                    <input className="inputBox" type="text" id="email" name="email" placeholder="Placeholder"></input>
                 </div>
                 <br></br>
-                <div class="inputBoxContainer">
-                    <label class="label" for="helpType">What best describes the kind of help you need?</label>
+                <div className="inputBoxContainer">
+                    <label className="label" for="helpType">What best describes the kind of help you need?</label>
                     <br></br>
-                    <input class="inputBox" type="text" id="helpType" name="helpType" placeholder="Food"></input>
+                    <input className="inputBox" type="text" id="helpType" name="helpType" placeholder="Food"></input>
                 </div>
                 <br></br>
-                <div class="inputBoxContainer">
-                    <label class="label" for="label">Label</label>
+                <div className="inputBoxContainer">
+                    <label className="label" for="label">Label</label>
                     <br></br>
-                    <input class="inputBox" type="text" id="label" name="label" placeholder="Placeholder"></input>
+                    <input className="inputBox" type="text" id="label" name="label" placeholder="Placeholder"></input>
                 </div>
             </div>
 
             <br></br>
             
-            <button class="sendRequest" type="submit">+ Send request</button>
+            <button className="sendRequest" type="submit">+ Send request</button>
         </form>
     </div>
     );
