@@ -19,4 +19,15 @@ const requestSchema = new mongoose.Schema({
     label: String
 })
 
-module.exports = mongoose.model('requests', requestSchema)
+const foodBankAccSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    password: String,
+    address: String,
+    phoneNumber: String,
+    typeOfHelp: String
+})
+
+module.exports = {
+    foodBankAcc: mongoose.model('foodBankAcc', foodBankAccSchema),
+    request: mongoose.model('request', requestSchema)}

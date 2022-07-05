@@ -28,29 +28,24 @@ function BeneficiarySignUp() {
                         <p>Tell us about yourself</p>
                     </div>
 
-                    <form action="/HTML/hackathon/thankyou.html">
+                    <form method="POST" action="/new-food-bank-account">
                         <div class="TextBox">
-                            <div><input type="text" placeholder="Name of centre or organisation" required /></div>
+                            <div><input name="name" type="text" placeholder="Name of centre or organisation" required /></div>
                             <br />
-                            <div><input type="text" placeholder="Email" required /></div>
+                            <div><input name="email" type="email" placeholder="Email" required /></div>
                             <br />
-                            <div><input type="text" placeholder="Website" required /></div>
+                            <div><input name="password1" type="password" placeholder="Password" required /></div>
                             <br />
-                            <div><input type="text" placeholder="First line of address" required /></div>
+                            <div><input name="password2" type="password" placeholder="Retype Password" required /></div>
                             <br />
-                            <div><input type="text" placeholder="City / Town" required /></div>
+                            <div><input name="address" type="text" placeholder="Full address" required /></div>
                             <br />
-                            <div><input type="text" placeholder="Post code" required /></div>
+                            <div><input name="phoneNumber" type="text" placeholder="Contact number" required /></div>
                             <br />
-                            <div><input type="text" placeholder="Contact number" required /></div>
+                            <div><input name="helpType" type="text" placeholder="Type of help" required /></div>
                             <br />
-                            <span>
-                                <a class="button" href="/HTML/hackathon/thankyou.html">
-                                    <input type="submit" value="Create Account" />
-                                </a>
-                            </span>
-
-                        </div>
+                            <button type="submit" value="Create Account">submit</button>
+                            </div>
                     </form>
                 </div>
 

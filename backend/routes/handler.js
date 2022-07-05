@@ -1,7 +1,35 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require("mongoose");
-const request = require("../database.js")
+const {request} = require("../database.js")
+const {foodBankAcc} = require("../database.js")
+const bcrypt = require('bcrypt');
+
+router.post('/new-food-bank-account', async (req, res) => {
+    console.log("yep")
+    if (req.body.password1 != req.body.password2) {
+        // need to implement a message that is returned to notify the user
+        // that the account wasn't created as the passwords didn't match
+        res.redirect('/food-bank-sign-up')
+    } else {
+        const hashedPassword = await bcrypt.hash(req.body.password1, 10)
+        const newFoodBank = new foodBankAcc({
+            name: req.body.name,
+            email: req.body.email,
+            password: hashedPassword,
+            address: req.body.address,
+            phoneNumber: req.body.phoneNumber,
+            typeOfHelp: req.body.helpType
+        });
+        try {
+            console.log("saving new food bank account to db")
+            await newFoodBank.save()
+        } catch (err) {
+            console.log('error saving new food bank acc to db')
+        }
+    res.redirect('/food-bank-requests')
+    }
+});
 
 router.post('/request-form', async (req, res) => {
     const newRequest = new request({
@@ -14,11 +42,10 @@ router.post('/request-form', async (req, res) => {
         label:req.body.label 
     });
     try {
-        console.log("saving to db")
+        console.log("saving help request to db")
         await newRequest.save()
-        }
-    catch(err) {
-        console.log('error saving to db');
+        } catch(err) {
+        console.log('error saving help request to db');
     }
     res.redirect('/beneficiary-request')
 });
@@ -26,6 +53,6 @@ router.post('/request-form', async (req, res) => {
 router.get('/support-requests', async (req, res) => {
     const data = await request.find({})
     res.end(JSON.stringify(data));
-    });
+});
 
 module.exports = router;
