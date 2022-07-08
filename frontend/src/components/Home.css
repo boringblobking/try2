@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'sans-serif';
+  /* background-color: rgb(103, 206, 206); */
+}
+
+ul {
+  margin: 0;
+}
+
+
+.MainHeader {
+  width: 100%;
+  height: 50px;
+}
+
+.HeaderImage {
+  width: 40px;
+  height: 10px;
+}
+
+.NavLinks {
+  text-align: end;
+}
+
+.backgroundImage {
+  background-image: url("../images/StraplineUpdated.png");
+  background-size: cover;
+  position: realtive;
+  width: 100%;
+  height: 50vh;
+}
+
+.subHeader {
+  display: flex;
+  justify-content: center;
+}
+
+.boxed {
+  text-align: center;
+  float: left;
+  width: 300;
+  padding: 24px 32px 24px 32px;
+  gap: 16px;
+  margin: auto 32px;
+
+  min-width: 300px;
+  border: 1px solid #CFE1F9;
+  border-radius: 4px;
+
+}
+
+.boxed:hover {
+  background-color: lightblue;
+  border: 2.5px solid darkblue;
+
+}
+
+
+
+/* .container {
+  display: block;
+  position: relative;
+  padding-left: 350px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} */
+
+
+.title {
+  text-align: center;
+
+
+}
+
+.body {
+  position: relative;
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0 2rem 0;
+}
+
+
+.loginLinks {
+  margin: 10px 40%;
+}
+
+.message {
+  margin: 44px 40%;
+  width: 400px;
+
+}
+
+.Footer {
+  border-top: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0 1rem 0;
+}
+
+
+
+/* Foodbank sign up formatting */
+.forms {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 110px;
+  min-width: 50%;
+}
+
+.SignupHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin-bottom: 64px;
+}
+
+.SignupHeading h1 {
+  margin: 0;
+}
+
+.SignupHeading p {
+  margin: 20px 0 0 0;
+}
+
+.FoodbankSignup {
+  margin: 5px 40%;
+}
+
+input {
+  min-width: 423px;
+  min-height: 52px;
+  border: 1px solid #DBE2EA;
+  border-radius: 4px;
+  transition: .3s all;
+}
+
+input:hover {
+  border: 2px solid darkblue;
+}
+
+
+input::placeholder {
+  padding: 16px;
+  margin: 0;
+}
+
+.imageHolder {
+  width: 50%;
+  margin-top: 110px;
+}
+
+.imageHolder img {
+  width: 100%;
+}
+
+input[type=submit] {
+  width: 5px;
+  height: 49px;
+  background-color: #5193EB;
+  color: white;
+  padding: 14px 20px;
+  margin: 14px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.TextBox {
+  padding: 20px;
+  margin-left: 20px;
+}
+
+
+/* Thank you page */
+
+.thankyouText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin-left: 30%;
+}

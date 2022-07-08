@@ -1,13 +1,12 @@
 import React from 'react';
 import './BeneficiaryRequest.css'
-import smallLogo from '../images/logo.png'
 
 function BeneficiaryRequest() {
     return(
     <div>
         <nav className='navbar'>
                 <div className='full-logo'> 
-                    <img src={smallLogo} className='logo'/> 
+                    <img src={require("../images/logo.png")} className='logo'/> 
                     <h3 className='logo-txt'><span className='red'>Food</span><span className='purple'>&Flow</span></h3>
                 </div>
                 <ul className='nav-links'>
