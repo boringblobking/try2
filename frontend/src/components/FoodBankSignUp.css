@@ -79,3 +79,7 @@ input[type=submit]:hover {
     margin-left: 20px;
     left: 20px;
 } */
+
+.ripPasswords {
+    color: red;
+}

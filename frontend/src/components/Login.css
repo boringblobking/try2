@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-
+/* 
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', 'sans-serif';
-  /* background-color: rgb(103, 206, 206); */
 }
 
 ul {
   margin: 0;
-}
+} */
 
 
 .MainHeader {
@@ -79,8 +78,6 @@ ul {
 
 .title {
   text-align: center;
-
-
 }
 
 .body {
@@ -152,7 +149,7 @@ ul {
 .FoodbankSignup {
   margin: 5px 40%;
 }
-
+/* 
 input {
   min-width: 423px;
   min-height: 52px;
@@ -169,7 +166,7 @@ input:hover {
 input::placeholder {
   padding: 16px;
   margin: 0;
-}
+} */
 
 .imageHolder {
   width: 50%;
@@ -179,7 +176,7 @@ input::placeholder {
 .imageHolder img {
   width: 100%;
 }
-
+/* 
 input[type=submit] {
   width: 5px;
   height: 49px;
@@ -190,7 +187,7 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
+} */
 
 .TextBox {
   padding: 20px;
