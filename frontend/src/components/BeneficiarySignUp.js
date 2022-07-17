@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './BeneficiarySignUp.css'
 import './LandingPage.css'
 import './BeneficiarySignUp.css'
@@ -7,6 +7,9 @@ import bigLogo from '../images/big-logo.png'
 import HeroShot from '../images/HeroShot.png'
 
 function BeneficiarySignUp() {
+    const [show, setShow] = useState(false)
+    const [pw1, setPw1] = useState('')
+    const [pw2, setPw2] = useState('')
     return (
         <div>
             <div className='landing-bdy'>
@@ -25,13 +28,16 @@ function BeneficiarySignUp() {
                 <div className="everything">
                     <form method="POST" action="/new-beneficiary-account" class="formclass">
                         <fieldset>
+                            {
+                                show ? <p className="ripPasswords">bro, the passwords don't even match mate</p> : null
+                            }
                             <label> Enter Your Name <input type="text" name="name" placeholder="Name" required></input></label>
                             <label> Enter Your Email: <input type="email" name="email" placeholder="Email" required></input></label>
-                            <label> password <input type="password" name="password1" placeholder="password" required></input></label>
-                            <label> re-enter password <input type="password" name="password2" placeholder="re-enter password" required></input></label>
+                            <label> password <input value={pw1} onChange={e => {setPw1(e.target.value); setShow(false)}} type="password" name="password1" placeholder="password" required></input></label>
+                            <label> re-enter password <input value={pw2} onChange={e => {setPw2(e.target.value); setShow(false)}} type="password" name="password2" placeholder="re-enter password" required></input></label>
                             <label> address <input type="text" name="address" placeholder="address" required></input></label>
-                            <label>phone number <input type="text" name="phoneNumber" placeholder="phone number" required></input></label>
-                            <label>Type of organization <input type="text" name="organizationType" placeholder="type of organization" required></input></label>
+                            <label> phone number <input type="text" name="phoneNumber" placeholder="phone number" required></input></label>
+                            <label> Type of organization <input type="text" name="organizationType" placeholder="type of organization" required></input></label>
                         </fieldset>
                         <fieldset>
                             <label>What Best Describes your Organisation?
@@ -44,7 +50,7 @@ function BeneficiarySignUp() {
                                 </select>
                             </label>
                         </fieldset>
-                        <button type="submit" value="Create Account">Create Account</button>
+                        <button onClick={()=>{if(pw1!=pw2) {setShow(true)}}}    type="submit" value="Create Account">Create Account</button>
                     </form>
                     <br></br>
                     <div class="imageHolder">

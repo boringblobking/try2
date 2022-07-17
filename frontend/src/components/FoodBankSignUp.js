@@ -9,6 +9,15 @@ function BeneficiarySignUp() {
     const [show, setShow] = useState(false)
     const [pw1, setPw1] = useState('')
     const [pw2, setPw2] = useState('')
+    const handleSubmit = event => {
+        event.preventDefault();
+        if(pw1 != pw2) {
+            setShow(true)
+        } else {
+            // somehow submit the form
+        }
+        // wat to do!?!?!?!?
+    }
     return (
         <div className='landing-bdy'>
             <nav className='navbar'>
@@ -51,7 +60,7 @@ function BeneficiarySignUp() {
                             <br />
                             <div><input name="helpType" type="text" placeholder="Type of help" required /></div>
                             <br />
-                            <button onClick={()=>{if(pw1!=pw2) {setShow(true)}}} type="submit" value="Create Account">submit</button>
+                            <button onClick={handleSubmit} type="submit" value="Create Account">submit</button>
                             </div>
                     </form>
                 </div>
