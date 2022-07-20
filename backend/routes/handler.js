@@ -21,14 +21,16 @@ router.post('/new-food-bank-account', async (req, res) => {
             address: req.body.address,
             phoneNumber: req.body.phoneNumber,
             typeOfHelp: req.body.helpType
-        });
+        }); 
         try {
             console.log("saving new food bank account to db")
             await newFoodBank.save()
         } catch (err) {
             console.log('error saving new food bank acc to db')
         }
+    console.log('ok time to redirect')
     res.redirect('/food-bank-requests')
+    console.log('should have redirected now')
     }
 });
 
