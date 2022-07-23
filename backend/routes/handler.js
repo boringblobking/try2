@@ -31,12 +31,9 @@ router.post('/new-food-bank-account', async (req, res) => {
 });
 
 router.post('/new-beneficiary-account', async (req, res) => {
-    console.log("yep")
-    if (req.body.password1 != req.body.password2) {
-        // need to implement a message that is returned to notify the user
-        // that the account wasn't created as the passwords didn't match
-        res.redirect('/beneficiary-sign-up')
-    } else {
+    console.log("server got post request for '/new-beneficiary-account'")
+    if (req.body.password1 == req.body.password2) {
+        res.json({passwordsSame: true})
         const hashedPassword = await bcrypt.hash(req.body.password1, 10)
         const newBeneficiary = new beneficiaryAcc({
             name: req.body.name,
@@ -44,15 +41,16 @@ router.post('/new-beneficiary-account', async (req, res) => {
             password: hashedPassword,
             address: req.body.address,
             phoneNumber: req.body.phoneNumber,
-            organizationType: req.body.organizationType
-        });
+            organizationType: req.body.organization
+        })
         try {
             console.log("saving new beneficary account to db")
             await newBeneficiary.save()
-        } catch (err) {
+        }   catch (err) {
             console.log('error saving new beneficiary acc to db')
         }
-    res.redirect('/beneficiary-request')
+    } else {
+        res.json({passwordsSame: false})
     }
 });
 
