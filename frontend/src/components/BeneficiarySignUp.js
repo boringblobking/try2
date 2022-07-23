@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 import './BeneficiarySignUp.css'
 import './LandingPage.css'
-import './BeneficiarySignUp.css'
 import smallLogo from '../images/logo.png'
 import bigLogo from '../images/big-logo.png'
 import HeroShot from '../images/HeroShot.png'

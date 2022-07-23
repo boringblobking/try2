@@ -7,12 +7,9 @@ const {beneficiaryAcc} = require("../database.js")
 const bcrypt = require('bcrypt');
 
 router.post('/new-food-bank-account', async (req, res) => {
-    console.log("yep")
-    if (req.body.password1 != req.body.password2) {
-        // need to implement a message that is returned to notify the user
-        // that the account wasn't created as the passwords didn't match
-        res.redirect('/food-bank-sign-up')
-    } else {
+    console.log("server got post request for '/new-food-bank-account'")
+    if (req.body.password1 == req.body.password2) {
+        res.json({passwordsSame: true})
         const hashedPassword = await bcrypt.hash(req.body.password1, 10)
         const newFoodBank = new foodBankAcc({
             name: req.body.name,
@@ -21,16 +18,15 @@ router.post('/new-food-bank-account', async (req, res) => {
             address: req.body.address,
             phoneNumber: req.body.phoneNumber,
             typeOfHelp: req.body.helpType
-        }); 
+        })
         try {
             console.log("saving new food bank account to db")
             await newFoodBank.save()
         } catch (err) {
             console.log('error saving new food bank acc to db')
         }
-    console.log('ok time to redirect')
-    res.redirect('/food-bank-requests')
-    console.log('should have redirected now')
+    } else {
+        res.json({passwordsSame: false})
     }
 });
 

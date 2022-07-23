@@ -1,13 +1,15 @@
-import React, {useState} from 'react';
+import React, {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 import './FoodBankSignUp.css'
 import './LandingPage.css'
 import smallLogo from '../images/logo.png'
 import bigLogo from '../images/big-logo.png'
 import HeroShot from '../images/HeroShot.png'
-import axios from 'axios';
+import axios from 'axios'
 
 function BeneficiarySignUp() {
-    const [show, setShow] = useState(false)
+    const navigate = useNavigate()
+    const [showError, setShowError] = useState(false)
     const [name, setName] = useState('')
     const [pw1, setPw1] = useState('')
     const [pw2, setPw2] = useState('')
@@ -15,25 +17,28 @@ function BeneficiarySignUp() {
     const [address, setAddress] = useState('')
     const [phoneNum, setPhoneNum] = useState('')
     const [helpType, setHelpType] = useState('')
+
     const handleSubmit = event => {
         event.preventDefault();
-        if(pw1 != pw2) {
-            setShow(true)
-        } else {
-            // somehow submit the form
-            axios.post('/new-food-bank-account', 
-            {
-                name: name,
-                email: email,
-                password1: pw1,
-                password2: pw2,
-                address: address,
-                phoneNumber: phoneNum,
-                helpType: helpType
-            })
-        }
-        // wat to do!?!?!?!?
+        console.log("frontend is awake")
+        axios.post('/new-food-bank-account', 
+        {
+            name: name,
+            email: email,
+            password1: pw1,
+            password2: pw2,
+            address: address,
+            phoneNumber: phoneNum,
+            helpType: helpType
+        }).then((res) => {
+            if (res.data.passwordsSame) {
+                navigate("/food-bank-requests");
+            } else {
+                setShowError(true)
+            } 
+        })
     }
+
     return (
         <div className='landing-bdy'>
             <nav className='navbar'>
@@ -59,16 +64,16 @@ function BeneficiarySignUp() {
                     <form method="POST" action="/new-food-bank-account">
                         <div class="TextBox">
                             {
-                                show ? <p className="ripPasswords">bro, the passwords don't even match mate</p> : null
+                                showError ? <p className="ripPasswords">bro, the passwords don't even match mate</p> : null
                             }
                             <br />
                             <div><input value={name} onChange={e => {setName(e.target.value)}} name="name" type="text" placeholder="Name of centre or organisation" /></div>
                             <br />
                             <div><input value={email} onChange={e => {setEmail(e.target.value)}} name="email" type="email" placeholder="Email" /></div>
                             <br />
-                            <div><input value={pw1} onChange={e => {setPw1(e.target.value); setShow(false)}} name="password1" type="password" placeholder="Password" /></div>
+                            <div><input value={pw1} onChange={e => {setPw1(e.target.value); setShowError(false)}} name="password1" type="password" placeholder="Password" /></div>
                             <br />
-                            <div><input value={pw2} onChange={e => {setPw2(e.target.value); setShow(false)}} name="password2" type="password" placeholder="Retype Password" /></div>
+                            <div><input value={pw2} onChange={e => {setPw2(e.target.value); setShowError(false)}} name="password2" type="password" placeholder="Retype Password" /></div>
                             <br />
                             <div><input value={address} onChange={e => {setAddress(e.target.value)}} name="address" type="text" placeholder="Full address" /></div>
                             <br />
