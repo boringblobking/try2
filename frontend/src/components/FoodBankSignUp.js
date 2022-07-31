@@ -62,7 +62,7 @@ function BeneficiarySignUp() {
 
                     <form method="POST" action="/new-food-bank-account">
                         <div class="TextBox">
-                            { showError ? <p className="ripPasswords">bro, the passwords don't even match mate rRVVBwWBababaSTAEB</p> : null}
+                            { showError ? <p className="ripPasswords">bro, the passwords don't even match mate</p> : null}
                             <br />
                             <div><input value={name} onChange={e => {setName(e.target.value)}} name="name" type="text" placeholder="Name of centre or organisation" /></div>
                             <br />
