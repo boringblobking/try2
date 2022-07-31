@@ -32,7 +32,7 @@ function FoodBankRequests() {
             <div className="gap"></div>
             <div className="welcomeBox">
                 <h2 className="welcomeMessage">Welcome, Liverpool Street Food Bank</h2>
-                <p className="welcomeSubText">Use this area to track and receive requests for help. sfedf</p>
+                <p className="welcomeSubText">Use this area to track and receive requests for help.</p>
             </div>
             <div className="gap"></div>
             <div>
