@@ -24,7 +24,7 @@ const LandingPage = () => {
                         <img src={bigLogo} className='jumbo-logo' />
                         <h4 className='jumbo-logo-txt'><span className='red'>Food</span><span className='purple'>&Flow</span></h4>
                     </div>
-                    <h1 className='white jumbo-txt'>A double place to help those in need</h1>
+                    <h1 className='white jumbo-txt'>A single place to help those in need</h1>
                     <p className='white jumbo-mini-txt'>Food&Flow provides a single place to communicate with your recipients and suppliers</p>
                 </div>
                 <div className='circle-container'>
