@@ -11,9 +11,9 @@ function BeneficiarySignUp() {
     const navigate = useNavigate()
     const [showError, setShowError] = useState(false)
     const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
     const [pw1, setPw1] = useState('')
     const [pw2, setPw2] = useState('')
-    const [email, setEmail] = useState('')
     const [address, setAddress] = useState('')
     const [phoneNum, setPhoneNum] = useState('')
     const [helpType, setHelpType] = useState('')
@@ -62,7 +62,7 @@ function BeneficiarySignUp() {
 
                     <form method="POST" action="/new-food-bank-account">
                         <div class="TextBox">
-                            { showError ? <p className="ripPasswords">bro, the passwords don't even match mate</p> : null}
+                            { showError ? <p className="ripPasswords">bro, the passwords don't even match mate rRVVBwWBababaSTAEB</p> : null}
                             <br />
                             <div><input value={name} onChange={e => {setName(e.target.value)}} name="name" type="text" placeholder="Name of centre or organisation" /></div>
                             <br />
