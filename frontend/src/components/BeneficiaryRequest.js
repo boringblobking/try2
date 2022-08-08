@@ -1,7 +1,37 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './BeneficiaryRequest.css'
+import axios from 'axios'
+import Cookies from 'js-cookie'
+import {useNavigate} from 'react-router-dom'
 
 function BeneficiaryRequest() {
+    const [beneficiaryName, setBeneficiaryName] = useState('')
+    const navigate = useNavigate()
+
+    useEffect( ()=> {
+        getBeneficiaryName()
+    }, []);
+
+    const getBeneficiaryName = async() => {
+        axios.post('/get-beneficiary-name', { session: Cookies.get('session') }).then((res) => {
+            setBeneficiaryName(res.data)
+        })
+    }
+
+    const logout = async() => {
+        console.log("loging out")
+        if (Cookies.get('session')) {
+            axios.post('logout', { session: Cookies.get('session') }).then((res) => {
+                if (res.data === "successfully deleted session") {
+                    Cookies.remove('session')
+                    navigate("/")
+                } else {
+                    console.log("issue deleting cookie")
+                } 
+            })
+        }
+    }
+
     return(
     <div>
         <nav className='navbar'>
@@ -13,11 +43,12 @@ function BeneficiaryRequest() {
                     <li><strong>Home</strong></li>
                     <li>About Us</li>
                     <li>Contact</li>
+                    <button onClick={logout}>Logout</button>
                 </ul>
         </nav>
         <div className="gap"></div>
         <div className="welcomeBox">
-                <h2 className="welcomeMessage">Welcome, Brampton Manor Academy</h2>
+                <h2 className="welcomeMessage">Welcome, {beneficiaryName}</h2>
                 <p className="welcomeSubText">Tell us a bit more so that we can connect you with someone that can help.</p>
         </div>
         <div className="gap"></div>

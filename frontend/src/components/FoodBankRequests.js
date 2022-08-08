@@ -1,10 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import './FoodBankRequests.css'
 import smallLogo from '../images/logo.png'
 import axios from 'axios'
 
 function FoodBankRequests() {
+    const navigate = useNavigate()
     const [items, setItems] = useState([])
     const [foodBankName, setFoodBankName] = useState('')
 
@@ -14,18 +16,36 @@ function FoodBankRequests() {
     }, []);
 
     const fetchItems = async() => {
+        console.log(Cookies.get('session'))
         axios.post('/support-requests', { session: Cookies.get('session') }).then((res) => {
             const items = res.data
             setItems(items)
         });
     };
 
-    // make logout 
-    // look at heroku hosting or sth
     const getFoodBankName = async() => {
-        axios.post('/get-food-bank-name', { session: Cookies.get('session')}).then((res) => {
+        axios.post('/get-food-bank-name', { session: Cookies.get('session') }).then((res) => {
             setFoodBankName(res.data)
         })
+    }
+
+    const logout = async() => {
+        console.log("loging out")
+        if (Cookies.get('session')) {
+            console.log("progress")
+            console.log(Cookies.get('session'))
+            axios.post('logout', { session: Cookies.get('session') }).then((res) => {
+                console.log("more progress")
+                console.log("this is res: " + res)
+                console.log("this is res.data: " + res.data)
+                if (res.data === "successfully deleted session") {
+                    Cookies.remove('session')
+                    navigate("/")
+                } else {
+                    console.log("issue deleting cookie")
+                } 
+            })
+        }
     }
 
     return(
@@ -40,6 +60,7 @@ function FoodBankRequests() {
                     <li><strong>Home</strong></li>
                     <li>About Us</li>
                     <li>Contact</li>
+                    <button onClick={logout}>Logout</button>
                 </ul>
             </nav>
             <div className="gap"></div>

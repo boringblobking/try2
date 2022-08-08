@@ -73,7 +73,6 @@ router.post('/new-beneficiary-account', async (req, res) => {
 });
 
 router.post('/request-form', async (req, res) => {
-    console.log(req.sessionID)
     const newRequest = new request({
         requestedFoodBank: req.body.requestedFoodBank,
         requestingOrganization: req.body.requestingOrganization,
@@ -94,15 +93,33 @@ router.post('/request-form', async (req, res) => {
 
 router.post('/support-requests', async (req, res) => {
     const user = await userSession.findOne({ sessionID: req.body.session })
+    if (user) {
     const foodBankRecord = await foodBankAcc.findOne({ email: user.user })
     const requests = await request.find({ requestedFoodBank: foodBankRecord.name })
     res.end(JSON.stringify(requests))
+    } else {
+        console.log("users null see " + user)
+    }
 });
 
 router.post('/get-food-bank-name', async (req, res) => {
     const user = await userSession.findOne({ sessionID: req.body.session })
+    if (user) {
     const foodBankRecord = await foodBankAcc.findOne({ email: user.user })
     res.end(foodBankRecord.name)
+    } else {
+        console.log("users null see " + user)
+    }
+});
+
+router.post('/get-beneficiary-name', async (req, res) => {
+    const user = await userSession.findOne({ sessionID: req.body.session })
+    if (user) {
+    const beneficiaryRecord = await beneficiaryAcc.findOne({ email: user.user })
+    res.end(beneficiaryRecord.name)
+    } else {
+        console.log("users null see " + user)
+    }
 });
 
 router.post('/get-user-type', async (req, res) => {
@@ -166,6 +183,11 @@ router.post('/login', async (req, res) => {
             res.json({ result: "wrong email" })
         }
     }
+});
+
+router.post('/logout', async (req, res) => {
+    await userSession.deleteOne({ sessionID: req.body.session })
+    res.end("successfully deleted session")
 })
 
 module.exports = router;
