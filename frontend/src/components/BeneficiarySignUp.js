@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
+import Cookies from 'js-cookie'
+import uuid from 'react-uuid'
 import {useNavigate} from 'react-router-dom'
 import './BeneficiarySignUp.css'
 import './LandingPage.css'
 import smallLogo from '../images/logo.png'
-import bigLogo from '../images/big-logo.png'
 import HeroShot from '../images/HeroShot.png'
 import axios from 'axios'
 
@@ -20,6 +21,7 @@ function BeneficiarySignUp() {
 
     const handleSubmit = event => {
         event.preventDefault()
+        const sessionID = uuid()
         axios.post('/new-beneficiary-account', 
         {
             name: name,
@@ -28,9 +30,11 @@ function BeneficiarySignUp() {
             password2: pw2,
             address: address,
             phoneNum: phoneNum,
-            organization: organization
+            organization: organization,
+            cookie: sessionID
         }).then((res) => {
-            if (res.data.passwordsSame) {
+            if (res.data.userSaved) {
+                Cookies.set('session', sessionID, {expires: 36500})
                 navigate("/beneficiary-request");
             } else {
                 setShowError(true)
@@ -43,7 +47,7 @@ function BeneficiarySignUp() {
             <div className='landing-bdy'>
                 <nav className='navbar'>
                     <div className='full-logo'>
-                        <img src={smallLogo} className='logo' />
+                        <img src={smallLogo} alt="sry img rekt" className='logo' />
                         <h3 className='logo-txt'><span className='red'>Food</span><span className='purple'>&Flow</span></h3>
                     </div>
 

@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
+import Cookies from 'js-cookie'
 import './FoodBankRequests.css'
 import smallLogo from '../images/logo.png'
+import axios from 'axios'
 
 function FoodBankRequests() {
     useEffect( ()=> {
@@ -10,16 +12,19 @@ function FoodBankRequests() {
     const [items, setItems] = useState([]);
 
     const fetchItems = async() => {
-        const data = await fetch('/support-requests');
-        const items = await data.json();
-        setItems(items);
+        axios.post('/support-requests', { session: Cookies.get('session') }).then((res) => {
+            const items = res.data
+            setItems(items)
+        });
+        // const items = await data.json();
+        // setItems(items);
     };
 
     return(
         <div className="pageContent">
             <nav className='navbar'>
                 <div className='full-logo'>
-                    <img src={smallLogo} className='logo'/> 
+                    <img src={smallLogo} alt="sry img rekt" className='logo'/> 
                     <h3 className='logo-txt'><span className='red'>Food</span><span className='purple'>&Flow</span></h3>
                 </div>
 

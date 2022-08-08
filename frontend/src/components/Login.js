@@ -7,7 +7,7 @@ import './Login.css';
 function login() {
   return(
     <section>
-         <div className='logo'><img src={require('../images/logo.png')} width='200' height='50' /></div>
+         <div className='logo'><img src={require('../images/logo.png')} alt="sry img is rekt" width='200' height='50' /></div>
           <header class="mainHeader"></header>
           <body>
     <header>

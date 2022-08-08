@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-mongoose.connect("mongodb+srv://Mohmag111:Mohmag078@cluster0.w5sp9.mongodb.net/?retryWrites=true&w=majority")
+const connection = mongoose.connect("mongodb+srv://Mohmag111:Mohmag078@cluster0.w5sp9.mongodb.net/?retryWrites=true&w=majority")
 
 const requestSchema = new mongoose.Schema({
     requestedFoodBank: String,
@@ -37,7 +37,14 @@ const beneficiaryAccSchema = new mongoose.Schema({
     organizationType: String
 })
 
+const sessionSchema = new mongoose.Schema({
+    sessionID: String,
+    user: String
+})
+
 module.exports = {
     foodBankAcc: mongoose.model('foodBankAcc', foodBankAccSchema),
     beneficiaryAcc: mongoose.model('beneficiaryAcc', beneficiaryAccSchema),
-    request: mongoose.model('request', requestSchema)}
+    request: mongoose.model('request', requestSchema),
+    userSession: mongoose.model('session', sessionSchema),
+    connection: connection}

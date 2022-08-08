@@ -6,7 +6,7 @@ function BeneficiaryRequest() {
     <div>
         <nav className='navbar'>
                 <div className='full-logo'> 
-                    <img src={require("../images/logo.png")} className='logo'/> 
+                    <img src={require("../images/logo.png")} alt="sry img rekt" className='logo'/> 
                     <h3 className='logo-txt'><span className='red'>Food</span><span className='purple'>&Flow</span></h3>
                 </div>
                 <ul className='nav-links'>
