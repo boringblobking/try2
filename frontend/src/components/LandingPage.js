@@ -11,14 +11,10 @@ const LandingPage = () => {
     useEffect(() => {
         const session = Cookies.get('session')
         if (session) {
-            console.log("yes theres a session here")
             axios.post('/get-user-type', { session: session }).then((res) => {
-                console.log("posted ennit")
                 if (res.data.userType === "food bank") {
-                    console.log("going to food bank")
                     navigate('/food-bank-requests')
                 } else if (res.data.userType === "beneficiary") {
-                    console.log("going to beneficiary")
                     navigate('/beneficiary-request')
                 } else {
                     console.log("it seems some user has managed to get a session ID that is unrelated to any account in the database")

@@ -23,6 +23,7 @@ const foodBankAccSchema = new mongoose.Schema({
     name: String,
     email: String,
     password: String,
+    salt: String,
     address: String,
     phoneNumber: String,
     helpType: String
@@ -32,6 +33,7 @@ const beneficiaryAccSchema = new mongoose.Schema({
     name: String,
     email: String,
     password: String,
+    salt: String,
     address: String,
     phoneNumber: String,
     organizationType: String

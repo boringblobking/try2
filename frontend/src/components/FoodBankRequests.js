@@ -5,20 +5,28 @@ import smallLogo from '../images/logo.png'
 import axios from 'axios'
 
 function FoodBankRequests() {
-    useEffect( ()=> {
-        fetchItems();
-    }, []);
+    const [items, setItems] = useState([])
+    const [foodBankName, setFoodBankName] = useState('')
 
-    const [items, setItems] = useState([]);
+    useEffect( ()=> {
+        fetchItems()
+        getFoodBankName()
+    }, []);
 
     const fetchItems = async() => {
         axios.post('/support-requests', { session: Cookies.get('session') }).then((res) => {
             const items = res.data
             setItems(items)
         });
-        // const items = await data.json();
-        // setItems(items);
     };
+
+    // make logout 
+    // look at heroku hosting or sth
+    const getFoodBankName = async() => {
+        axios.post('/get-food-bank-name', { session: Cookies.get('session')}).then((res) => {
+            setFoodBankName(res.data)
+        })
+    }
 
     return(
         <div className="pageContent">
@@ -36,7 +44,7 @@ function FoodBankRequests() {
             </nav>
             <div className="gap"></div>
             <div className="welcomeBox">
-                <h2 className="welcomeMessage">Welcome, Liverpool Street Food Bank</h2>
+                <h2 className="welcomeMessage">Welcome, {foodBankName} </h2>
                 <p className="welcomeSubText">Use this area to track and receive requests for help.</p>
             </div>
             <div className="gap"></div>
